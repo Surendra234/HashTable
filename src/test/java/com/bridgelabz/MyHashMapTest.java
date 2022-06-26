@@ -27,5 +27,8 @@ public class MyHashMapTest {
         System.out.println("\nMy Hash Map :\n");
         System.out.println(myHashMap +"\n");
         Assertions.assertEquals(3,frequency);
+
+        myHashMap.remove("avoidable");
+        System.out.println("\nAfter removing the word from the Hash map : \n" +myHashMap);
     }
 }

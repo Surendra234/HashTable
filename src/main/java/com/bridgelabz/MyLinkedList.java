@@ -37,6 +37,22 @@ public class MyLinkedList<K> {
         return null;
     }
 
+    // Delete Method
+    public INode delete(K key) {
+
+        INode<K> currentNode = head;
+        INode<K> previousNode = null;
+
+        while (currentNode != null && currentNode.getNext() != null) {
+            previousNode = currentNode;
+            if(currentNode.getKey().equals(key)) {
+                previousNode.setNext(currentNode.getNext());
+            }
+            currentNode = currentNode.getNext();
+        }
+        return currentNode;
+    }
+
     @Override
     public String toString() {
         return "MyLinkedList{" +
